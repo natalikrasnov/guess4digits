@@ -3,6 +3,7 @@ import './MainGame.styles.scss';
 
 import { getRandom4Digits } from '../../utils/randoms'
 import { STATUS } from '../../constants/constants';
+import Confetti from '../confetti/Confetti.componnent';
 
 function MainGame() {
   const [inputGuess, setInputGuess] = useState("0000")
@@ -10,8 +11,6 @@ function MainGame() {
 
   const [guess, setGuess] = useState(getRandom4Digits())
   const [statusAnswer, setStatusAnswer] = useState(STATUS.none)
-
-  const confettiElements = Array(10).fill(0);
 
   const setInput = (event) => {
     if(!event.target) return
@@ -42,8 +41,7 @@ function MainGame() {
 
   return (
     <div className="App ">
-        {statusAnswer === STATUS.correct ?<div className='confetti-container'>
-     {confettiElements.map(() => (<div className='confetti'></div>))} </div>: <div></div>}
+        {statusAnswer === STATUS.correct ? <Confetti /> : <div></div>}
       
       {
         statusAnswer === STATUS.none ?
