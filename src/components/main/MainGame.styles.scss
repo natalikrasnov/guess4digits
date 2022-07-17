@@ -1,5 +1,4 @@
 
-
 .guess-label{
     color: #646cff;
 }
@@ -9,20 +8,31 @@
    
     .inputDigits{
         position: relative;
-        top: 10rem;
+        top: 3rem;
         z-index: -5;
         display: flex;
         align-items: center;
         justify-content: left;
-        height: 150px;
-        font-size: 5rem;
+        height: 80px;
+        font-size: 2rem;
     
         .single_char {
-                margin: 0 40px;
+                margin: 0 20px;
                 padding : 0 10px;
-                height: 50px;
+                height: 30px;
                 border-bottom: 1px solid white;
-            }
+
+                @media (min-width: 650px) {
+                    height: 50px;
+                    margin: 0 40px;
+                }
+        }
+
+        @media (min-width: 650px) {
+            height: 150px;
+            top: 8rem;
+            font-size: 5rem;
+        }
 
     }
     .hint {
@@ -37,22 +47,31 @@
 
     input{
         background-color: transparent;
-        max-width: 480px;
-        height: 150px;
-        letter-spacing: 6.3rem;
+        max-width: 280px;
+        height: 80px;
+        letter-spacing: 3rem;
         padding-left: 1rem;
-        font-size: 5rem;
+        font-size: 2rem;
         border: none;
         // border-bottom: 1px solid white;
         outline: none;
         color: transparent;
         caret-color: white;
+        position: relative;
+        top: -2rem;
+
+        @media (min-width: 650px) {
+            max-width: 480px;
+            height: 150px;
+            font-size: 5rem;
+            letter-spacing: 6.3rem;
+        }
     }
 }
 
 
 .check-button{
-    margin: 0 2rem;
+    margin: 0.2rem 2rem;
 
         &:focus {            
             outline: none ;
