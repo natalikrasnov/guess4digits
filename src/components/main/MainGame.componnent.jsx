@@ -20,6 +20,9 @@ function MainGame() {
     if (event.target.value == '') {
       clean()
     } 
+     if (event.target.value .length == 4) {
+      // check()
+    } 
   }
 
   const check = () => {
